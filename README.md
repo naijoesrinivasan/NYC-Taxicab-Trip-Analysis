@@ -125,7 +125,8 @@ ___
 - Graph Analysis - Use Neo4j to run PageRank and BFS algorithms:
      - PageRank
      ```cypher
-     CALL gds.pageRank.stream('graph_name') YIELD nodeId, score
+     CALL gds.pageRank.stream('graph_name') 
+     YIELD nodeId, score
      RETURN gds.util.asNode(nodeId).name AS location, score
      ORDER BY score DESC
      ```
